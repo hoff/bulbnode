@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Bulb Node</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        button {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+</script>
+
+<body>
+    <button onClick="socket.emit('command', 'setup')">setup</button>
+    <button onClick="socket.emit('command', 'start')">start rainbox ></button>
+    <button onClick="socket.emit('command', 'stop')">stop rainbox x</button>
+    <button onClick="socket.emit('command', 'step')">single step</button>
+
+
+    <input type="color" onChange="setColor(0, this.value)" />
+    <input type="color" onChange="setColor(1, this.value)" />
+    <input type="color" onChange="setColor(2, this.value)" />
+
+</body>
+
+<script>
+function setColor(position, hex) {
+    socket.emit('color', {position: position, hex: hex})
+}
+</script>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "bulbnode",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "marty mc hoff",
+  "description": "a simple web server that controls lightbulbs",
+  "license": "MIT",
+  "engines": {
+    "node": ">=5.8"
+  },
+  "scripts": {
+    "start": "node ./bulbnode.js"
+  },
+  "dependencies": {
+    "express": "4.14.0",
+    "noble": "1.7.0",
+    "socket.io": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.45"
+  }
+}
