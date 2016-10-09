@@ -21,3 +21,7 @@ This grants the node binary cap_net_raw privileges, so it can start/stop BLE adv
 
 Note: The above command requires setcap to be installed, it can be installed using the following:
 apt: sudo apt-get install libcap2-bin
+
+# install node and nvm on raspbian
+it's pretty straight forward:
+https://github.com/blobsmith/raspberryTestNode/wiki/Node.js-installation-with-nvm-on-Raspberry-pi
