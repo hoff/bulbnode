@@ -4,6 +4,6 @@
         "module": "commonjs",
         "sourceMap": true,
         "types": ["node"],
-        "noImplicitAny": true
+        "noImplicitAny": false
     }
 }
